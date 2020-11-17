@@ -1,0 +1,16 @@
+#title {
+	text-align: center;
+	justify-content: center;
+	margin-top: 50px;
+	//border: 1px solid black;
+}
+
+#form {
+	text-align: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+#submit {
+	border-radius: 10px;
+}
