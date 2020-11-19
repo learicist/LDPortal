@@ -1,8 +1,13 @@
+.container-fluid {
+	background-color: blue;
+}
+
 #title {
 	text-align: center;
 	justify-content: center;
 	margin-top: 50px;
-	//border: 1px solid black;
+	color: white;
+	/*border: 1px solid black;*/
 }
 
 #form {
