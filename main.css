@@ -1,21 +1,13 @@
-.container-fluid {
-	background-color: blue;
+.title {
+   /* color: rgba(21, 118, 212, 1); */
+   color: white;
+   font-family: "Playfair Display", serif;
+   font-size: 29pt;
+   font-weight: 400;
+   letter-spacing: -0.6px;
+   /* line-height: 1.44; */
 }
 
-#title {
-	text-align: center;
-	justify-content: center;
-	margin-top: 50px;
-	color: white;
-	/*border: 1px solid black;*/
-}
-
-#form {
-	text-align: center;
-	justify-content: center;
-	margin-top: 50px;
-}
-
-#submit {
-	border-radius: 10px;
+.main {
+   padding-top: 5%;
 }
