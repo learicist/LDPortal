@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppBar, Button } from "@material-ui/core";
+import logo from "../../img/trilogy_logo2.png";
+import fb from "../Firebase";
+import { AuthContext } from "../Auth/Context";
 
-function Navbar() {
-   return (
-      <nav className="light-blue lighten-1">
-         <div className="nav-wrapper">
-            {/* <a href="#" className="brand-logo title left-align">Instructional L&D</a>  */}
-            <a href="https://sites.google.com/2u.com/teachthetrilogyway/learning-opportunities/recordings/archived-recordings" className="title left-align">
-               Instructional L&D
-            </a>
-         </div>
-      </nav>
-   );
-}
+const AppNavbar = () => {
+   const { currentUser } = useContext(AuthContext);
 
-export default Navbar;
+   if (currentUser) {
+      return (
+         <AppBar title={<img alt="logo" src={logo} />}>
+            <Button id="signout-btn" onClick={() => fb.auth().signOut()}>
+               Sign Out
+            </Button>
+         </AppBar>
+      );
+   } else {
+      return <AppBar title={<img alt="logo" src={logo} />}></AppBar>;
+   }
+};
+
+export default AppNavbar;
