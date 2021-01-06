@@ -10,13 +10,13 @@ const AppNavbar = () => {
    if (currentUser) {
       return (
          <AppBar title={<img alt="logo" src={logo} />}>
-            <Button id="signout-btn" onClick={() => fb.auth().signOut()}>
+            {/* <Button id="signout-btn" onClick={() => fb.auth().signOut()}>
                Sign Out
-            </Button>
+            </Button> */}
          </AppBar>
       );
    } else {
-      return <AppBar title={<img alt="logo" src={logo} />}></AppBar>;
+      return <AppBar title={<img alt="logo" src={logo} />}>{/* <h4>Trilogy Education LD&S Portal</h4> */}</AppBar>;
    }
 };
 
