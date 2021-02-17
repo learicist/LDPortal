@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -8,7 +8,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import fb from "../Firebase";
-import { AuthContext } from "../Auth/Context";
+// import { AuthContext } from "../Auth/Context";
 
 const useStyles = makeStyles((theme) => ({
    toolbar: {

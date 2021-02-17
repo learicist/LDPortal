@@ -1,23 +1,26 @@
 import React from "react";
+import Link from "@material-ui/core/Link";
+import Box from "@material-ui/core/Box";
+import "./index.css";
+
+function Copyright() {
+   return (
+      <p>
+         {"Copyright © "}
+         <Link color="inherit" href="https://www.trilogyed.com/">
+            Trilogy Edycation Services
+         </Link>
+         , a 2U, Inc. brand. All rights reserved {new Date().getFullYear()}
+         {"."}
+      </p>
+   );
+}
 
 const Footer = () => {
    return (
-      <footer>
-         <div className="row">
-            <div className="col">
-               <div>
-                  <p>
-                     © 2020
-                     <a href="https://trilogyed.com" style={{ color: "#32C6E6" }}>
-                        {" "}
-                        Trilogy Education Services
-                     </a>
-                     <br />A 2U, Inc. brand - all rights reserved
-                  </p>
-               </div>
-            </div>
-         </div>
-      </footer>
+      <Box class="footer">
+         <Copyright />
+      </Box>
    );
 };
 
