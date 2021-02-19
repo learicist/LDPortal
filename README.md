@@ -1,2 +1,0 @@
-# LDPortal
-Authorization page 
