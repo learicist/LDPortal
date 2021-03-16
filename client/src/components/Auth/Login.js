@@ -4,11 +4,10 @@ import LDSHome from "../LDSHome";
 import fb from "../Firebase";
 import { AuthContext } from "./Context";
 import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-// import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -31,14 +30,15 @@ const useStyles = makeStyles((theme) => ({
 
 const Login = ({ history }) => {
    const classes = useStyles();
-
+   const url = "https://sites.google.com/2u.com/teachthetrilogyway/home";
    const handleLogin = useCallback(
       async (event) => {
          event.preventDefault();
          const { email, password } = event.target.elements;
          try {
             await fb.auth().signInWithEmailAndPassword(email.value, password.value);
-            history.push("/");
+            // history.push("/");
+            window.location.href = url;
          } catch (error) {
             alert(error);
          }
@@ -54,7 +54,6 @@ const Login = ({ history }) => {
 
    return (
       <Container className="main" component="main" maxWidth="xs">
-         <CssBaseline />
          <div className={classes.paper}>
             <Typography component="h1" variant="h5">
                Sign in
@@ -76,18 +75,14 @@ const Login = ({ history }) => {
                <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
                   Sign In
                </Button>
-               {/* <Grid container>
-                  <Grid item xs>
-                     <Link href="#" variant="body2">
-                        Forgot password?
-                     </Link>
-                  </Grid>
-                  <Grid item>
-                     <Link href="#" variant="body2">
-                        {"Don't have an account? Sign Up"}
-                     </Link>
-                  </Grid>
-               </Grid> */}
+               <hr />
+               <p align="center">
+                  Copyright ©{" "}
+                  <Link style={{ color: "aqua" }} href="https://www.trilogyed.com/">
+                     Trilogy Education Services
+                  </Link>
+                  , a 2U, Inc. brand. All rights reserved {new Date().getFullYear()}.
+               </p>
             </form>
          </div>
       </Container>
